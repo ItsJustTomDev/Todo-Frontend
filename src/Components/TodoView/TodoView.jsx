@@ -20,14 +20,16 @@ function TodoView({ selectedTodoList }) {
 
   useEffect(() => {
     console.log(selectedTodoList);
-    axios.get("http://localhost:3000/api/todos").then((response) => {
-      setTodoItems(response.data);
-    });
+    axios
+      .get("https://todo-backend-tomdev.herokuapp.com/api/todos")
+      .then((response) => {
+        setTodoItems(response.data);
+      });
   }, []);
 
   const createNewTodo = () => {
     axios
-      .post("http://localhost:3000/api/todos", {
+      .post("https://todo-backend-tomdev.herokuapp.com/api/todos", {
         description: newTodo,
         checked: false,
         todoListID: selectedTodoList.id,

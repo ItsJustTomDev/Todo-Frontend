@@ -7,7 +7,7 @@ import axios from "axios";
 function TodoListItem({ todoName, active, onClick, todoID, onDelete }) {
   const deleteTodoListItem = () => {
     axios
-      .delete("http://localhost:3000/api/todolist", {
+      .delete("https://todo-backend-tomdev.herokuapp.com/api/todolist", {
         data: {
           id: todoID,
         },

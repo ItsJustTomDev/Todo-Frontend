@@ -9,7 +9,7 @@ function TodoItem({ todoItem, onChange, onDelete }) {
     let updatedChecked = !todoItem.checked;
 
     axios
-      .put("http://localhost:3000/api/todos", {
+      .put("https://todo-backend-tomdev.herokuapp.com/api/todos", {
         todoListID: todoItem.id,
         checked: updatedChecked,
       })
@@ -21,7 +21,7 @@ function TodoItem({ todoItem, onChange, onDelete }) {
 
   const deleteTodo = () => {
     axios
-      .delete("http://localhost:3000/api/todos", {
+      .delete("https://todo-backend-tomdev.herokuapp.com/api/todos", {
         data: {
           todoListID: todoItem.id,
         },

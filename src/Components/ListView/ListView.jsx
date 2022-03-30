@@ -21,7 +21,7 @@ function ListView({ onChange }) {
   const handleClose = () => setOpen(false);
 
   useEffect(() => {
-    axios.get("http://localhost:3000/api/todolist").then((response) => {
+    axios.get("https://todo-backend-tomdev.herokuapp.com/api/todolist").then((response) => {
       setTodos(response.data);
       setSelectedTodo(response.data[0]);
       onChange(response.data[0]);
@@ -37,7 +37,7 @@ function ListView({ onChange }) {
 
   const createNewTodoList = () => {
     axios
-      .post("http://localhost:3000/api/todolist", {
+      .post("https://todo-backend-tomdev.herokuapp.com/api/todolist", {
         TodoList: newTodoList,
       })
       .then((response) => {
