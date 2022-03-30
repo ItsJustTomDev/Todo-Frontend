@@ -1,0 +1,28 @@
+.listView {
+  width: 15.5rem;
+  height: 100%;
+  border-right: 2px solid #d9d9d9;
+  display: flex;
+  flex-direction: column;
+}
+
+.listView__title {
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.listView__wrapper {
+  flex: 1;
+}
+
+.listView__add {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem;
+}
+
+.listView__add .MuiIconButton-root {
+  color: green;
+}

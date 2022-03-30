@@ -1,0 +1,55 @@
+.todoView__container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.todoView__title {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.todoView__todos {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid #ececec;
+  padding: 0 1rem;
+}
+
+.todoView__checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.todoView__delete .MuiIconButton-root {
+  color: red;
+}
+
+.todoView__add {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem;
+}
+
+.todoView__add .MuiIconButton-root {
+  color: green;
+}
+
+.todoView__wrapper {
+  flex: 1;
+}
+
+.todoView__modal {
+  position: "absolute";
+  top: "50%";
+  left: "50%";
+  transform: "translate(-50%, -50%)";
+  width: 400;
+  border: "2px solid #000";
+}
+
+.todoView__modalButtons {
+  display: flex;
+  justify-content: space-between;
+}
